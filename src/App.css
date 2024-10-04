@@ -58,7 +58,7 @@
 
 .grid-container{
   display: grid;
-  grid-template-columns: auto auto auto auto;
+  grid-template-columns: minmax(auto, 250px) minmax(auto, 250px) minmax(auto, 250px) minmax(auto, 250px);
   grid-gap: 1rem;
   margin: 1rem 0;
 }
@@ -104,7 +104,7 @@
 
 @media screen and (max-width: 920px) {
   .grid-container{
-    grid-template-columns: auto auto auto;
+    grid-template-columns: minmax(auto, 250px) minmax(auto, 250px) minmax(auto, 250px);
   }
 }
 
