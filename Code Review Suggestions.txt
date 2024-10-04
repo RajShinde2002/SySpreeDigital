@@ -1,0 +1,21 @@
+Part 2: Code Review Task
+Objective: Review the following code snippet and suggest improvements. Explain your thought
+process and provide recommendations for refactoring.
+```javascript
+function fetchData() {
+ fetch('https://api.example.com/data')
+ .then(response => response.json())
+ .then(data => {
+ data.forEach(item => {
+ console.log(item);
+ });
+ })
+ .catch(error => console.error('Error fetching data:', error));
+}
+```		
+
+Answer:
+While working with apis, we should always perform asynchronous operations with the help of 'async await' keywords as we might not know when will the data get fetched and be available for our use.
+We should use useEffect with an empty array as a dependency to get the response only once, and avoid getting stuck in an infinite loop.
+To handle error, we can use try and catch block and effectively catch any error.
+Since 'fetch' is used and not 'axios', we should make sure that we handle the case where the response is not ok, as 'fetch' does not do it by itself.
