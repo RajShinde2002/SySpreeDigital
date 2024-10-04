@@ -3,7 +3,6 @@ import './App.css';
 import { Search } from 'lucide-react';
 import Lightbox from './components/Lightbox';
 import PhotoCard from './components/PhotoCard';
-import {access_key} from '../../Assessment/secret'
 
 function App() {
   const [photos, setPhotos] = useState([]);
@@ -19,7 +18,7 @@ function App() {
   useEffect(() => {
     const fetchData = async () => {
       try {
-        const response = await fetch(`https://api.unsplash.com/photos/?client_id=${access_key}`);
+        const response = await fetch('https://api.unsplash.com/photos/?client_id=5UXKcPDOxyjDX2aqe5e_EYMRuUkGVlDaDYgLJMr45AU');
         if (!response.ok) {
           throw new Error("Something went wrong!");
         }
