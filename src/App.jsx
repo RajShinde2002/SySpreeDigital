@@ -84,7 +84,7 @@ const totalPages = Math.ceil(filteredPhotos.length / photosPerPage);
     <>
     <div className='input-box-container'>
     <div className='input-box'>
-      <input className='input-tag' type="text" onChange={handleChange} value={input} placeholder="Search by title" />
+      <input className='input-tag' type="text" onChange={handleChange} value={input} placeholder="Search by title..." />
       <Search width={20} height={20}/>
     </div>
     </div>
